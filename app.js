@@ -6,8 +6,9 @@ const mongoose = require('mongoose');
 
 const userRoutes = require('./api/routes/users');
 
-const config = require('./config/index');
-const dbURI = process.env.DB_URI || config.dbURI;
+//const config = require('./config/index');
+//|| config.dbURI
+const dbURI = process.env.DB_URI;
 mongoose.connect(dbURI, {
     useNewUrlParser: true,
     useCreateIndex: true,
